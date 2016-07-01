@@ -1,0 +1,14 @@
+{
+  "name": "review-my-code-website",
+  "version": "0.0.0",
+  "description": "The public face of ReviewMyCode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xavier Cambar <xcambar@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli": "^0.16.9"
+  }
+}
