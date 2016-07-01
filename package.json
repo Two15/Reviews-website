@@ -9,6 +9,8 @@
   "author": "Xavier Cambar <xcambar@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "broccoli": "^0.16.9"
+    "broccoli": "^0.16.9",
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-sass": "^0.7.0"
   }
 }
