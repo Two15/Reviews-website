@@ -1,1 +1,10 @@
-@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "bourbon";
+@import "neat";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @include outer-container;
+}

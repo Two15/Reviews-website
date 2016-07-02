@@ -15,8 +15,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "devDependencies": {
-    "bourbon": "~4.2.7"
-  }
+  ]
 }
