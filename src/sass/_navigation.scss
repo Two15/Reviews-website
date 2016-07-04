@@ -1,0 +1,70 @@
+nav.navigation {
+  $background-color: white;
+  $dark-gray: #333 !default;
+  $large-screen: 53.75em !default;
+  $navigation-padding: 1em;
+  $navigation-color: $dark-gray;
+  $horizontal-bar-mode: $large-screen;
+
+  $title-padding-top: 0.8em;
+
+  position: fixed;
+  margin-top: -1 * $navigation-height;
+  @include outer-container;
+
+  background-color: white;
+  min-height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .navigation-wrapper {
+    @include clearfix;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .logo {
+    float: left;
+    max-height: $navigation-height;
+    padding-left: $navigation-padding;
+    padding-right: 2em;
+
+    h1 {
+      color: $navigation-color;
+      font-weight: bold;
+      padding: $title-padding-top 0;
+    }
+  }
+
+  // Mobile view
+
+  .navigation-menu-button {
+    color: $navigation-color;
+    display: block;
+    float: right;
+    line-height: $navigation-height;
+    margin: 0;
+    padding-right: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+  }
+
+  // Elements on the far right
+
+  .navigation-tools {
+    @include clearfix;
+    display: block;
+    height: $navigation-height;
+    padding: 0.6em $navigation-padding 0;
+
+    @include media($horizontal-bar-mode) {
+      background: $background-color;
+      clear: none;
+      float: right;
+    }
+  }
+}

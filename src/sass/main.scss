@@ -1,12 +1,26 @@
 @import "bourbon";
 @import "neat";
 
+@import "variables";
+
 @import "base/base";
+
+@import "customs/buttons";
+
+@import "navigation";
+@import "heading";
+@import "call-to-action";
+@import "how";
+@import "details";
+@import "footer";
 
 html, body {
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   @include outer-container;
+  padding-top: $navigation-height;
 }

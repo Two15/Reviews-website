@@ -1,0 +1,12 @@
+footer {
+  @include clearfix;
+  color: lighten($base-font-color, 10%);
+  font-size: .8em;
+  padding-bottom: .5em;
+  > :first-child {
+    float: left;
+  }
+  > :last-child {
+    float: right;
+  }
+}
