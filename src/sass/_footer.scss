@@ -9,4 +9,10 @@ footer {
   > :last-child {
     float: right;
   }
+  > .love, > .cheers {
+    @include media($mobile) {
+      float: none;
+      text-align: center;
+    }
+  }
 }

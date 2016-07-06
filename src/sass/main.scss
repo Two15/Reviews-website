@@ -23,4 +23,8 @@ html, body {
 body {
   @include outer-container;
   padding-top: $navigation-height;
+  @include media($mobile) {
+    padding-top: 0;
+  }
+
 }

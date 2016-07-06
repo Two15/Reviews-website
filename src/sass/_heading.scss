@@ -1,8 +1,36 @@
 header {
   margin-top: 6em;
+  @include media($mobile) {
+    margin-top: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
   text-align: center;
   h1 {
     font-weight: 400;
     font-size: 2em;
+    &.name {
+      display: none;
+      @include media($mobile) {
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+    &:not(.name) {
+      @include media($mobile) {
+        display: none;
+      }
+    }
+  }
+  h2 {
+    @include media($mobile) {
+      display: none;
+    }
+  }
+  h2.short {
+    display: none;
+    @include media($mobile) {
+      display: block;
+    }
   }
 }

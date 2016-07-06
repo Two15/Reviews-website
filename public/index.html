@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ReviewMyCode - Better code reviews for your Github projects</title>
   <link rel="stylesheet" href="./main.css">
 </head>
@@ -11,15 +13,16 @@
       <a href="/" class="logo">
         <h1>Review My Code</h1>
       </a>
-      <a href="/" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
       <div class="navigation-tools">
         <input class="button-green"  type="button" value="Login">
       </div>
     </div>
   </nav>
   <header>
+    <h1 class="name">Review My Code</h1>
     <h1>Reviewed code is better than good code.</h1>
-    <h2>Only ship code that has been reviewed.</h2>
+    <h2>Only ship what has been reviewed.</h2>
+    <h2 class="short">Ship reviewed code only.</h2>
   </header>
   <section class="cta">
     <a class="cta" href="/">
@@ -39,22 +42,28 @@
   <hr>
   <section class="details">
     <h3>(almost) tweet-sized manual</h3>
-    <div class="card">
-      <h4>Ask for reviews</h4>
-      <p>
-        Write <code>review: @user1 @user2</code> in the description
-        of the PR or in a comment to request a review.
-      </p>
+    <div class="card_outer">
+      <div class="card">
+        <h4>Ask for reviews</h4>
+        <p>
+          Write <code>review: @user1 @user2</code> in the description
+          of the PR or in a comment to request a review.
+        </p>
+      </div>
     </div>
-    <div class="card">
-      <h4>Accept or reject a PR</h4>
-      <p>
-        Write a comment containing only 👍 or 👎 to accept or reject a PR.
-      </p>
+    <div class="card_outer">
+      <div class="card">
+        <h4>Accept or reject a PR</h4>
+        <p>
+          Write a comment containing only 👍 or 👎 to accept or reject a PR.
+        </p>
+      </div>
     </div>
-    <div class="card">
-      <h4>Force a review</h4>
-      <p>Write a comment containing <code>!!FORCE 👍 @user1</code> to force accept a PR on behalf of <code>@user1</code>.</p>
+    <div class="card_outer">
+      <div class="card">
+        <h4>Force a review</h4>
+        <p>Write a comment containing <code>!!FORCE 👍 @user1</code> to force accept a PR on behalf of <code>@user1</code>.</p>
+      </div>
     </div>
   </section>
   <hr>

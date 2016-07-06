@@ -2,7 +2,14 @@
   a {
     @extend a.button.button-green.button-plain;
     @include span-columns(4);
-    @include shift-in-context(4);
+    @include shift(4);
+    @include media($mobile) {
+      @include span-columns(1);
+      @include shift(0);
+      border-radius: 3px;
+      margin: 0 0.5em;
+      width: calc(100% - 1em);
+    }
     font-size: 1.4em;
     text-align: center;
     padding: .5em 0;
