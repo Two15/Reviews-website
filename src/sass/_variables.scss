@@ -1,5 +1,5 @@
-$tablet: new-breakpoint(max-width 768px 12);
-$mobile: new-breakpoint(max-width 380px 1);
+$tablet: new-breakpoint(max-width 48em 12);
+$mobile: new-breakpoint(max-width 34em 1);
 
 $all-buttons: join($all-buttons, 'a.button');
 $navigation-height: 60px;
