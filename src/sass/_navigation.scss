@@ -49,5 +49,9 @@ nav.navigation {
     height: $navigation-height;
     padding: 0.6em $navigation-padding 0;
     float: right;
+    .button-highlight:hover:after {
+      right: $navigation-padding;
+      left: $navigation-padding;
+    }
   }
 }

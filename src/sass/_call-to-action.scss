@@ -16,6 +16,8 @@
     font-weight: 400;
     background-color: $light-green;
     color: lighten($green, 58%);
-    border-radius: 1rem;
+    border-radius: 1px;
+    border: 1px solid darken($light-green, 4%);
+    box-shadow: 1px 1px 1px 0 darken($green, .5), 0 0 1px 0 darken($green, .3);
   }
 }
