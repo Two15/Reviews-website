@@ -21,7 +21,7 @@
   padding: $padding 0;
   background-color: $light-green;
   color: lighten($green, 58%);
-  @include transition(all .4s $ease-in-out-back, color .3s ease-in-out, background-color .3s ease-in-out);
+  @include transition(all .4s $ease-out-back, color .3s ease-in-out, background-color .3s ease-in-out);
   margin-top: calc(#{$width/2} - #{ 2 * $padding});
   margin-bottom: calc(#{$width/2} - #{2 * $padding});
   &:hover {
