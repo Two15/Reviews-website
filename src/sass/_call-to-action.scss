@@ -1,23 +1,11 @@
 .cta {
-  a {
-    @extend a.button.button-green.button-plain;
+  > .hero_wrap {
     @include span-columns(4);
     @include shift(4);
-    @include media($mobile) {
-      @include span-columns(1);
-      @include shift(0);
-      border-radius: 3px;
-      margin: 0 0.5em;
-      width: calc(100% - 1em);
-    }
-    font-size: 1.4em;
     text-align: center;
-    padding: .5em 0;
-    font-weight: 400;
-    background-color: $light-green;
-    color: lighten($green, 58%);
-    border-radius: 1px;
-    border: 1px solid darken($light-green, 4%);
-    box-shadow: 1px 1px 1px 0 darken($green, .5), 0 0 1px 0 darken($green, .3);
+    > a {
+      @include rounded_hero;
+      display: inline-block;
+    }
   }
 }
