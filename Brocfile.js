@@ -9,8 +9,19 @@ var mergeTrees = require('broccoli-merge-trees');
 var replaceFiles = require('broccoli-replace');
 var SassCompiler = require('broccoli-sass');
 
+// Helpers
+function pad(str) {
+  return ('0' + str).slice(-2);
+}
+
 // values
-var uuid = require('node-uuid')();
+var today = new Date();
+var uuid = [
+  today.getFullYear(),
+  pad(today.getMonth() + 1),
+  pad(today.getDate()),
+  require('node-uuid')()
+].join('-');
 
 var appendRevision = function(tree) {
   return new Funnel(tree, {
@@ -28,7 +39,7 @@ var sassCompiler = new SassCompiler(
     .concat(require('bourbon-neat').includePaths)
     .concat(require('bourbon').includePaths),
   'main.scss',
-  'main.css'
+  'assets/main.css'
 );
 
 var replaceReferences = function(tree) {
