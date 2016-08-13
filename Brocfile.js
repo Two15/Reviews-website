@@ -48,7 +48,7 @@ var replaceReferences = function(tree) {
     patterns: [
       { match: 'revision', replacement: uuid },
       { match: 'build_time', replacement: (new Date()).toUTCString() },
-      { match: 'login_url', replacement: 'https://admin.review.two15.co' }
+      { match: 'login_url', replacement: 'https://admin.review.two15.co/login?auto' }
     ]
   });
 };
