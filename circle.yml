@@ -6,7 +6,6 @@ dependencies:
     - npm config set spin false
     - npm install -g npm bower
   post:
-    - sudo pip install awscli
     - aws configure set preview.cloudfront true
 deployment:
   production:
