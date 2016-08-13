@@ -44,7 +44,7 @@ var sassCompiler = new SassCompiler(
 
 var replaceReferences = function(tree) {
   return replaceFiles(tree, {
-    files: ['index.html'],
+    files: ['*.html'],
     patterns: [
       { match: 'revision', replacement: uuid },
       { match: 'build_time', replacement: (new Date()).toUTCString() },
@@ -55,8 +55,12 @@ var replaceReferences = function(tree) {
 
 var copyToStandardIndex = function(tree) {
   return new Funnel(tree, {
-    include: ['index-' + uuid + '.html'],
-    getDestinationPath: function() { return 'index.html'; }
+    include: ['index-' + uuid + '.html', '404-' + uuid + '.html'],
+    getDestinationPath: function(relativePath) {
+      var basename = path.basename(relativePath);
+      var extname = path.extname(relativePath);
+      return basename.split('-').shift() + extname;
+    }
   });
 };
 
