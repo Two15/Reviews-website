@@ -24,7 +24,8 @@ var uuid = [
 ].join('-');
 
 var appendRevision = function(tree) {
-  return new Funnel(tree, {
+  var indexes = new Funnel(tree, {
+    include: ['index.html', '404.html'],
     getDestinationPath: function(p) {
       var dir = path.dirname(p);
       var ext = path.extname(p);
@@ -32,6 +33,7 @@ var appendRevision = function(tree) {
       return util.format("%s/%s-%s%s", dir, base, uuid, ext);
     }
   });
+  return mergeTrees([tree, indexes], { overwrite: true });
 };
 
 var sassCompiler = new SassCompiler(
@@ -39,29 +41,18 @@ var sassCompiler = new SassCompiler(
     .concat(require('bourbon-neat').includePaths)
     .concat(require('bourbon').includePaths),
   'main.scss',
-  'assets/main.css'
+  `assets/main-${uuid}.css`
 );
 
 var replaceReferences = function(tree) {
-  return replaceFiles(tree, {
+  return mergeTrees([tree, replaceFiles(tree, {
     files: ['*.html'],
     patterns: [
       { match: 'revision', replacement: uuid },
       { match: 'build_time', replacement: (new Date()).toUTCString() },
       { match: 'login_url', replacement: 'https://admin.review.two15.co/login?auto' }
     ]
-  });
-};
-
-var copyToStandardIndex = function(tree) {
-  return new Funnel(tree, {
-    include: ['index-' + uuid + '.html', '404-' + uuid + '.html'],
-    getDestinationPath: function(relativePath) {
-      var basename = path.basename(relativePath);
-      var extname = path.extname(relativePath);
-      return basename.split('-').shift() + extname;
-    }
-  });
+  })], { overwrite: true });
 };
 
 var treePromise = Promise.resolve('public')
@@ -69,10 +60,7 @@ var treePromise = Promise.resolve('public')
   .then(function(tree) {
     return mergeTrees([ tree, sassCompiler ]);
   })
-  .then(appendRevision)
-  .then(function(tree) {
-    return mergeTrees([tree, copyToStandardIndex(tree)]);
-  });
+  .then(appendRevision);
 
 module.exports = {
   read: function(readTree) {
