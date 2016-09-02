@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <meta name="revised" content="{{ site.time }}">
+  <meta name="revision" content="{{ site.time | date: "%Y-%m-%d"}}-{% project_version commit long %}">
+  <title>{{ site.title }} - {{ page.title }}</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% asset_path "apple-touch-icon.png" %}">
+  <link rel="icon" type="image/png" href="{% asset_path "favicon-32x32.png" %}" sizes="32x32">
+  <link rel="icon" type="image/png" href="{% asset_path "favicon-16x16.png" %}" sizes="16x16">
+  <link rel="manifest" href="{% asset_path "manifest.json" %}">
+  <link rel="mask-icon" href="{% asset_path "safari-pinned-tab.svg" %}" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="Review My Code">
+  <meta name="application-name" content="Review My Code">
+  <meta name="theme-color" content="#ffffff">
+
+  {% css main %}
+</head>
+<body>
+  <nav class="navigation" role="banner">
+    <div class="navigation-wrapper">
+      <a href="{{ site.baseurl }}" class="logo">
+        <h1>Review My Code</h1>
+      </a>
+      <div class="navigation-tools">
+        <div class="button-highlight">
+          <a class="button button-green" href="{{ site.login_url }}">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="{{ page.class }}">
+    {{ content }}
+  </main>
+  <footer class="footer" role="contentinfo">
+    <div class="love">You're awesome. We love you.</div>
+    <div class="cheers">
+      Brought to you since 2016 by <a href="{{ site.company.url }}">{{ site.company.name }}</a>
+    </div>
+  </footer>
+</body>
+</html>

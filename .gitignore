@@ -2,3 +2,6 @@ dist
 node_modules
 bower_components
 tmp
+.asset-cache
+.sass-cache
+_site

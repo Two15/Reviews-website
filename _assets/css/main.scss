@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @import "bourbon";
 @import "neat";
 
@@ -8,6 +10,8 @@
 @import "customs/buttons";
 @import "customs/rounded_hero";
 
+@import "home";
+@import "tos";
 @import "navigation";
 @import "heading";
 @import "call-to-action";
@@ -23,7 +27,6 @@ html, body {
 
 body {
   @include outer-container;
-  padding-top: $navigation-height;
   @include media($mobile) {
     padding-top: 0;
   }

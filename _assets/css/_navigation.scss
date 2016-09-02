@@ -12,11 +12,9 @@ nav.navigation {
   }
 
   position: fixed;
-  margin-top: -1 * $navigation-height;
   @include outer-container;
 
   background-color: white;
-  min-height: $navigation-height;
   width: 100%;
   z-index: 999;
 
@@ -28,14 +26,13 @@ nav.navigation {
 
   .logo {
     float: left;
-    max-height: $navigation-height;
     padding-left: $navigation-padding;
     padding-right: 2em;
 
     h1 {
       color: $navigation-color;
       font-weight: bold;
-      padding: $title-padding-top 0;
+      padding: $title-padding-top 0 0;
     }
   }
 
@@ -46,7 +43,6 @@ nav.navigation {
   .navigation-tools {
     @include clearfix;
     display: block;
-    height: $navigation-height;
     padding: 0.6em $navigation-padding 0;
     float: right;
     .button-highlight:hover:after {
