@@ -1,11 +1,15 @@
 dependencies:
   post:
     - aws configure set preview.cloudfront true
+test:
+  pre:
+    - JEKYLL_ENV=production bundle exec jekyll build
+  override:
+    - bundle exec htmlproofer ./_site --only-4xx --allow-hash-href --check-favicon --check-html --enforce-https
 deployment:
   production:
     branch: master
     commands:
-      - JEKYLL_ENV=production bundle exec jekyll build
       - ./scripts/revision_html.sh
       - aws s3 sync _dist $S3_BUCKET_URI --acl public-read --cache-control "public, max-age=86400"
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths /index.html
