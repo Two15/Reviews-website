@@ -36,11 +36,6 @@
   <main class="{{ page.class }}">
     {{ content }}
   </main>
-  <footer class="footer" role="contentinfo">
-    <div class="love">You're awesome. We love you.</div>
-    <div class="cheers">
-      Brought to you since 2016 by <a href="{{ site.company.url }}">{{ site.company.name }}</a>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>
