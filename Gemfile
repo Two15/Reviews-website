@@ -10,6 +10,7 @@ ruby "2.3.1"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "3.2.1"
+gem 'html-proofer', '~> 3.0', '>= 3.0.6'
 
 group :jekyll_plugins do
   gem 'bourbon', '~> 4.2', '>= 4.2.7'

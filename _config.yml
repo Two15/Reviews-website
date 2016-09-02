@@ -37,6 +37,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - circle.yml
+  - vendor
 
 assets:
   assets:
