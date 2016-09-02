@@ -1,5 +1,4 @@
 header {
-  margin-top: 6em;
   @include media($mobile) {
     margin-top: 3em;
     padding-left: 1em;

@@ -1,0 +1,59 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Review My Code
+email: hello@two15.co
+# description: > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
+company:
+  name: "Two15"
+  url: "https://two15.co"
+url: "https://review.two15.co" # the base hostname & protocol for your site
+baseurl: "/"
+github_username:  Two15
+login_url: "https://admin.review.two15.co"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# As per https://github.com/jekyll/jekyll/pull/5293
+# Will be released in Jekyll 3.2.2
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - circle.yml
+
+assets:
+  assets:
+    - "browserconfig.xml"
+    - "manifest.json"
+    - "*.ico"
+    - "*.png"
+    - "*.svg"
+  sources:
+    - _assets/icons
+gems:
+  - bourbon
+  - jekyll-assets
+  - jekyll-deploy
+  - jekyll_version_plugin
+  - neat
+sass:
+  style: compressed
+  load_paths:
+    - _assets/css

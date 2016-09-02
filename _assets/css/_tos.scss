@@ -1,0 +1,14 @@
+.tos {
+  > section {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  ol {
+    @extend p;
+    ol.real {
+      list-style-type: lower-alpha;
+      margin-left: 2em;
+      margin-top: .75em;
+    }
+  }
+}
