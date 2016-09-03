@@ -1,6 +1,9 @@
 // Breakpoints
 $medium-screen: 600px;
 $large-screen: 900px;
+// Custom
+$tablet: new-breakpoint(max-width 48em 12);
+$mobile: new-breakpoint(max-width 34em 1);
 
 // Typography
 $base-font-family: $helvetica;
@@ -24,6 +27,13 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+// Custom
+$all-buttons: join($all-buttons, 'a.button');
+$green: adjust-hue(desaturate(lighten(green, 10%), 30%), -30);
+$light-green: hsla(90, 45%, 53%, 1);
+$red: adjust-hue(desaturate(lighten(red, 10%), 30%), -30);
+$light-red: lighten($red, 8%);
+$bean: desaturate(darken($medium-gray, 25%), 60%);
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -44,3 +54,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Other
+$title-separator-space: 1.5em;

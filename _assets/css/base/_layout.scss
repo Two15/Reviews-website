@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  @include textured_background;
 }
 
 *,
@@ -21,7 +22,4 @@ body {
       @include row();
     }
   }
-}
-
-main > section {
 }

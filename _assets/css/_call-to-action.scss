@@ -5,7 +5,7 @@
     text-align: center;
     > a {
       @include rounded_hero;
-      display: inline-block;
+      display: block;
     }
   }
 }

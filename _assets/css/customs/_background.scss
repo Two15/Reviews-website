@@ -1,0 +1,4 @@
+@mixin textured_background($bg_color:#fcfcfc) {
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+  background-color: $bg_color;
+}
