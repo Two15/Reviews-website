@@ -9,11 +9,14 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  > main {
+  .scrollable {
+    display: flex;
+    padding-top: 6em;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
     flex-grow: 1;
-    margin-top: 6em;
     > section {
       @include row();
     }

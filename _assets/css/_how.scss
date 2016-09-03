@@ -6,6 +6,7 @@ $margin-bottom: $title-separator-space;
   }
   small {
     @include row();
+    font-size: .4em;
     text-align: center;
     margin-bottom: $margin-bottom;
     font-variant: italic;

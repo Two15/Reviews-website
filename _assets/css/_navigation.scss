@@ -12,6 +12,7 @@ nav.navigation {
   }
 
   position: fixed;
+  top: 0;
   @include outer-container;
 
   background-color: white;

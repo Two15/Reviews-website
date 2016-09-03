@@ -1,6 +1,29 @@
 <footer class="footer" role="contentinfo">
-  <div class="love">You're awesome. We love you.</div>
-  <div class="cheers">
-    Brought to you since 2016 by <a href="{{ site.company.url }}">{{ site.company.name }}</a>
+  <!-- <div class="footer&#45;logo"> -->
+  <!--   <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image"> -->
+  <!-- </div> -->
+  <div class="footer-links">
+    <ul>
+      <li><h3>About</h3></li>
+      <li><a href="{{ site.url }}">{{ site.title }}</a></li>
+      <li><a href="{{ site.company.url }}">{{ site.company.name }}</a></li>
+    </ul>
+    <ul>
+      <li><h3>Contact us</h3></li>
+      <li><a href="email:{{ site.email }}">Email</a></li>
+      <li><a href="https://github.com/{{site.github_username}}">Github</a></li>
+    </ul>
+    <ul>
+      <li><h3>Legal</h3></li>
+      <li><a href="/tos">Terms and Conditions</a></li>
+    </ul>
   </div>
+
+  <hr>
+
+  <p>
+    You're awesome. We love you.
+    <br>
+    Brought to you since 2016 by <a href="{{ site.company.url }}">{{ site.company.name }}</a>
+  </p>
 </footer>

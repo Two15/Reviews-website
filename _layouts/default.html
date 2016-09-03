@@ -33,9 +33,11 @@
       </div>
     </div>
   </nav>
-  <main class="{{ page.class }}">
-    {{ content }}
-  </main>
-  {% include footer.html %}
+  <div class="scrollable">
+    <main class="{{ page.class }}">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
 </body>
 </html>
