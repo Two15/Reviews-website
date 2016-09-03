@@ -26,7 +26,6 @@ html, body {
 }
 
 body {
-  @include outer-container;
   @include media($mobile) {
     padding-top: 0;
   }

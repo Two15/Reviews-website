@@ -12,7 +12,6 @@ nav.navigation {
 
   position: fixed;
   top: 0;
-  @include outer-container;
 
   @include textured_background;
   width: 100%;
@@ -20,6 +19,7 @@ nav.navigation {
 
   .navigation-wrapper {
     @include clearfix;
+    @include outer-container;
     position: relative;
     z-index: 9999;
   }
