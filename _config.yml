@@ -22,7 +22,7 @@ company:
   name: "Two15"
   url: "https://two15.co"
 url: "https://review.two15.co" # the base hostname & protocol for your site
-baseurl: "/"
+baseurl: ""
 github_username:  Two15
 login_url: "https://admin.review.two15.co"
 logo: "/images/logo.png"
