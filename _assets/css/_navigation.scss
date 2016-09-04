@@ -33,6 +33,17 @@ nav.navigation {
       color: $navigation-color;
       font-weight: bold;
       padding: $title-padding-top 0 0;
+      > small {
+        font-size: 0.75em;
+        font-weight: 300;
+        font-style: italic;
+        > img {
+          height: 1.1em;
+          width: auto;
+          vertical-align: text-bottom;
+          margin-left: 3px;
+        }
+      }
     }
   }
 
