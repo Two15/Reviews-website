@@ -14,9 +14,10 @@
   <link rel="icon" type="image/png" href="{% asset_path "favicon-16x16.png" %}" sizes="16x16">
   <link rel="manifest" href="{% asset_path "manifest.json" %}">
   <link rel="mask-icon" href="{% asset_path "safari-pinned-tab.svg" %}" color="#5bbad5">
-  <meta name="apple-mobile-web-app-title" content="Review My Code">
-  <meta name="application-name" content="Review My Code">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <meta name="application-name" content="{{ site.title }}">
   <meta name="theme-color" content="#ffffff">
+  {% seo %}
 
   {% css main %}
 </head>
@@ -24,7 +25,7 @@
   <nav class="navigation" role="banner">
     <div class="navigation-wrapper">
       <a href="{{ site.baseurl }}" class="logo">
-        <h1>Review My Code</h1>
+        <h1>{{ site.title }}</h1>
       </a>
       <div class="navigation-tools">
         <div class="button-highlight">

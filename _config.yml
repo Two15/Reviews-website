@@ -13,12 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Review My Code
+title: Reviews
 email: hello@two15.co
-# description: > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
+description: >
+  Reviews is your tool to make sure that the pull requests in your projects
+  will be reviewed. Because great code gets greater with code reviews.
 company:
   name: "Two15"
   url: "https://two15.co"
@@ -26,6 +25,7 @@ url: "https://review.two15.co" # the base hostname & protocol for your site
 baseurl: "/"
 github_username:  Two15
 login_url: "https://admin.review.two15.co"
+logo: "/images/logo.png"
 
 # Build settings
 markdown: kramdown
@@ -52,6 +52,7 @@ gems:
   - bourbon
   - jekyll-assets
   - jekyll-deploy
+  - jekyll-seo-tag
   - jekyll_version_plugin
   - neat
 sass:

@@ -16,6 +16,7 @@ group :jekyll_plugins do
   gem 'bourbon', '~> 4.2', '>= 4.2.7'
   gem 'jekyll-assets', '~> 2.2', '>= 2.2.8'
   gem 'jekyll-deploy', '~> 0.0.2'
+  gem 'jekyll-seo-tag', '~> 2.0'
   gem 'jekyll_version_plugin', '~> 2.0'
   gem 'neat', '~> 1.8'
 end
