@@ -16,8 +16,7 @@
 title: Reviews
 email: hello@two15.co
 description: >
-  Reviews is your tool to make sure that the pull requests in your projects
-  will be reviewed. Because great code gets greater with code reviews.
+  Reviews integrates with Github to enforce code reviews. Because great code gets greater with code reviews.
 company:
   name: "Two15"
   url: "https://two15.co"

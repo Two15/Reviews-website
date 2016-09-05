@@ -21,15 +21,4 @@ header {
       }
     }
   }
-  h2 {
-    @include media($mobile) {
-      display: none;
-    }
-  }
-  h2.short {
-    display: none;
-    @include media($mobile) {
-      display: block;
-    }
-  }
 }
