@@ -22,6 +22,7 @@ nav.navigation {
     @include outer-container;
     position: relative;
     z-index: 9999;
+    padding-right: 30px;
   }
 
   .logo {
